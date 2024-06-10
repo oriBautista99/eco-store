@@ -1,0 +1,107 @@
+body {
+  margin: 0px;
+  padding: 0px;
+  background-color: #FFEFE7;
+  font-family: "IBM Plex Sans", sans-serif;
+}
+
+nav {
+  width: auto;
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+}
+nav p {
+  font-size: 1.5em;
+  padding-left: 30px;
+  color: #7C6A0A;
+  font-weight: 500;
+}
+nav .icons {
+  display: flex;
+  gap: 1rem;
+}
+nav .icons button {
+  border: none;
+  background: none;
+}
+
+article {
+  width: auto;
+  color: #7C6A0A;
+  padding-left: 45px;
+  padding-right: 30px;
+  padding-top: 40px;
+  display: flex;
+  justify-content: space-between;
+}
+article .impact-section {
+  display: flex;
+  flex-direction: column;
+  -moz-column-gap: 25px;
+       column-gap: 25px;
+  padding-top: 50px;
+}
+article h1 {
+  font-size: 3em;
+  padding: 0;
+  margin: 0;
+}
+article p {
+  font-size: 1.5em;
+}
+article button {
+  width: 12vw;
+  padding: 20px;
+  border-radius: 35px;
+  border-style: none;
+  color: #fff;
+  font-size: 1em;
+  font-weight: 700;
+  background-color: #FA9500;
+}
+article img {
+  width: 25vw;
+  border-radius: 19px;
+}
+
+section {
+  width: auto;
+  height: auto;
+  padding: 60px;
+}
+section h2 {
+  color: #7C6A0A;
+  font-size: 2em;
+}
+section .healthcare h2 {
+  font-weight: 300;
+  padding-bottom: 60px;
+}
+section .healthcare .icon {
+  width: 100%;
+  display: flex;
+  justify-content: end;
+}
+section .healthcare .product-card {
+  width: 15vw;
+  height: auto;
+  background-color: #FFDAC6;
+  color: #7C6A0A;
+  padding: 20px;
+  border-radius: 6px;
+}
+section .healthcare .product-card .product-image img {
+  width: 200px;
+  height: 250px;
+  background-image: cover;
+  border-radius: 15px;
+}
+
+footer {
+  background-color: #FA9500;
+  width: 100%;
+  height: 300px;
+}/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,235 @@
+$primary-color: #FFEFE7;
+$secondary-color: #FFDAC6;
+$tertiary-color: #BABD8D;
+$qsuaternary-color: #FA9500;
+$primary-text-color: #7C6A0A;
+$tertiary-text-color: #E86424;
+$font-stack: 'IBM Plex Sans', sans-serif;
+$paragraph-size : 1.5em;
+
+@mixin flexCenter($direction, $content:null, $align:null){
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $content;
+    align-items: $align;
+}
+
+@mixin buttonStyle{
+    button{
+        background: none;
+        border-style: none;        
+    }
+}
+
+body{
+    margin: 0px;
+    padding: 0px;
+    background-color: $primary-color;
+    font-family: $font-stack;
+}
+
+nav{
+    width: auto;
+    height: 60px;
+    @include flexCenter(row, space-between, center); 
+    padding: 1rem;
+    p{
+        font-size: $paragraph-size;
+        padding-left: 30px;
+        color: $primary-text-color;
+        font-weight: 500;
+    }
+    .icons{
+        display: flex;
+        gap: 1rem;
+        @include buttonStyle();
+    }
+}
+
+article{
+    width: auto;
+    color: $primary-text-color;
+    padding-left: 45px;
+    padding-right: 30px;
+    padding-top: 40px;
+    @include flexCenter(row,space-between,center);
+    .impact-section{
+        @include flexCenter(column, space-evenly, flex-start);
+        display: flex;
+        flex-direction: column;
+        column-gap: 25px;
+        padding-top: 50px;
+        // justify-content: center;
+    }
+    h1{
+        font-size: 3em;
+        padding: 0;
+        margin: 0;
+    }
+    p{
+        font-size: $paragraph-size;
+    }
+    @include buttonStyle();
+    button{
+        width: 12vw;
+        padding: 20px;
+        border-radius: 35px;
+        color: #fff;
+        font-size: 1em;
+        font-weight: 700;
+        background-color: $qsuaternary-color;
+        &:hover{
+            transform: scale(1.1);
+        }
+    }
+    img{
+        width: 25vw;
+        border-radius: 19px;
+    }
+    
+    
+}
+
+section{
+    width: auto;
+    height: auto;
+    padding: 60px;
+
+    h2{
+        color: $primary-text-color;
+        font-size: 2em;
+    }
+
+    .healthcare{
+        padding-bottom: 60px;
+        h2{
+            font-weight: 300;
+            padding-bottom: 60px;
+        }
+
+        .card-section{
+            @include flexCenter(row,space-evenly,center);
+            width: auto;
+            height: auto;
+            flex-wrap: wrap;
+            column-gap: 200px;
+            row-gap: 40px;
+        }
+        .product-card{
+            width: 14vw;
+            height: 45vh;
+            background-color: $secondary-color;
+            color: $primary-text-color;
+            padding: 20px;
+            border-radius: 8px;
+            .icon{
+                width: 100%;
+                display: flex;
+                justify-content: end;
+                padding-bottom: 12px;
+                svg{
+                    width: 24px;
+                    height: 24px;
+                    stroke: #7C6A0A;
+                    stroke-width: 2;
+                }
+            }                
+            .product-image{
+                width: 100%;
+                height: auto;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                img{
+                    width: 12vw;
+                    height: 30vh;
+                    object-fit: cover;
+                    border-radius: 6px;
+                }                
+            }
+        }  
+    }
+
+    .furniture{
+        @extend .healthcare;
+        .product-card{
+            background-color: $tertiary-color;
+            color: $primary-color;
+        }
+    }
+}
+
+.about-us{
+    padding-bottom: 60px;
+    h2{
+        font-weight: bold;
+        padding-bottom: 60px;
+    }
+    .mission-section{
+        @include flexCenter(row, space-evenly, center);
+        .eath{
+            width: 30vw;
+            @include flexCenter(row,null,center);
+            gap:40px;
+            color: $tertiary-text-color;
+            img{
+                object-fit: contain;
+            }
+            p{
+                text-align: center;
+                // font-size: $paragraph-size;
+                font-weight: bold;
+            }
+        }
+        .innovation{
+            @extend .eath;
+        }
+    }
+}
+
+.gallery{
+    padding-bottom: 60px;
+    h2{
+        font-weight: bold;
+        padding-bottom: 60px;  
+    }
+    .gallery-images{
+        @include flexCenter(row,space-between,center);
+        img{
+            width: 28vw;
+            height: 45vh;
+            object-fit: cover;
+            border-radius: 1rem;
+            object-position: 5px 35%;
+            &:hover{
+                transform: scale(1.1);
+            }
+        }
+    }
+}
+
+.location{
+    color: $tertiary-text-color;
+    h2{
+        padding-bottom: 60px;
+    }
+    .map{
+        @include flexCenter(row, center,center);
+        padding-bottom: 50px;
+    }
+    p, h3{
+        font-size: $paragraph-size;
+    }
+}
+
+footer{
+    background-color: $qsuaternary-color;
+    height: auto;
+    color: $primary-color;
+    padding: 40px;
+    .social-media{
+        @include flexCenter(row, center,center);
+        gap: 40px;
+        padding-bottom: 40px;
+    }
+}
